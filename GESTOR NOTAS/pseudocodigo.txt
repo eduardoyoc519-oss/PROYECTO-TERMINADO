@@ -1,0 +1,55 @@
+# --- FUNCION PRINCIPAL Y MENÚ ---
+
+def main():
+    while True:
+        print("\n====== GESTOR DE NOTAS ACADÉMICAS ======")
+        print("1. Registrar nuevo curso")
+        print("2. Mostrar todos los cursos y notas")
+        print("3. Calcular promedio general")
+        print("4. Contar cursos aprobados y reprobados")
+        print("5. Buscar curso por nombre (búsqueda lineal)")
+        print("6. Actualizar nota de un curso")
+        print("7. Eliminar un curso")
+        print("8. Ordenar cursos por nota (Burbuja)")
+        print("9. Ordenar cursos por nombre (Inserción)")
+        print("10. Buscar curso por nombre (Búsqueda Binaria)")
+        print("11. Agregar Solicitud de Revisión (Cola)")
+        print("12. Ver Historial de Cambios (Pila)")
+        print("13. Salir")
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == '1':
+            registrar_curso()
+        elif opcion == '2':
+            mostrar_cursos()
+        elif opcion == '3':
+            calcular_promedio_general()
+        elif opcion == '4':
+            contar_cursos_aprobados()
+        elif opcion == '5':
+            buscar_curso_lineal()
+        elif opcion == '6':
+            actualizar_nota()
+        elif opcion == '7':
+            eliminar_curso()
+        elif opcion == '8':
+            ordenar_cursos_por_nota_burbuja()
+        elif opcion == '9':
+            ordenar_cursos_por_nombre_insercion()
+        elif opcion == '10':
+            buscar_curso_binaria()
+        elif opcion == '11':
+            agregar_solicitud_revision()
+        elif opcion == '12':
+            ver_historial()
+        elif opcion == '13':
+            print("¡Adiooooos hasta pronto!")
+            break
+        else:
+            print("Opcion no válida. Por favor, intente de nuevo.")
+        
+        input("\nPresione Enter para continuar...")
+        os.system('cls' if os.name == 'nt' else 'clear')
+
+if __name__ == "__main__":
+    main()
